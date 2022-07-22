@@ -1,40 +1,65 @@
-// Assignment code here
+// Assignment code here:
 
-//window alert with pw options
-// below link referenced for creating "prompt" (confirm() method)
- //https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt
- // would you like to include upper case
- // examples from W3:
- function myFunction() {
-  let text = "Press a button!\nEither OK or Cancel.";
-  if (confirm(text) == true) {
-    text = "You pressed OK!";
-  } else {
-    text = "You canceled!";
+var userChoice1 = window.confirm("Do you require your password to include Upper Case?\nOK for Yes, Cancel for No");
+
+var userChoice2 = window.confirm("Do you require your password to include lower case?\nOK for Yes, Cancel for No"); 
+
+var userChoice3 = window.confirm("Do you require your password to include numbers?\nOK for Yes, Cancel for No");
+
+var userchoice4 = window.confirm("Do you require your password to include special characters?\nOK for Yes, Cancel for No")
+// ^ the above ^ variable declarations need to be added to PW gen code below
+// following is basic format from geeksforgeeks.com, which currently includes ALL optional PW criteria
+// function declaration:
+
+function generatePassword() {
+
+  var password = "";
+  var string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()-=" +
+                "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=";
+  for (let i = 0; i < 128; i++) {
+    var char = Math.floor(Math.random()
+                  * string.length + 1);
+    
+    password += string.charAt(char)
+    password = "AB" + string
   }
-  document.getElementById("demo").innerHTML = text;
+
+  return password;
 }
 
- // would you like to include lower case
- // would you like to include numbers
- // would you like to include special characters?
+function pwGen() {
+  pwrd.innerHTML = generatePassword();
 
-function pwCriteria() {
-  var text = window.confirm("Do you require your password to include Upper Case?\nOK for Yes, Cancel for No");
-   if (!text) {
-    return;
-   }
-   if (confirm(text) == true) {
-    //make pwCriteria() run again??
-    // do i need to use for loop?
-   }
+}
+
+
+
+
+
+var pwCriteria = function() {
+// would you like to include upper case?
+  var userChoice1 = window.confirm("Do you require your password to include Upper Case?\nOK for Yes, Cancel for No");
+    if (confirm(userChoice1) == false) {
+      var userChoice2  
+   } else (confirm(userChoice1) == true); {
+
+// would you like to include lower case?
+  var userChoice2 = window.confirm("Do you require your password to include lower case?\nOK for Yes, Cancel for No"); 
+       if (confirm(userChoice2) == false); {
+
+    }
+    // would you like to include numbers?
+  var 
+ // would you like to include special characters?
+  }
 }
 
 //PW generator function
 
 var pwrd = document.getElementById("gen");
 
-//function declaration:
+// used basic format from geeksforgeeks.com, which currently includes ALL optional PW criteria
+// function declaration:
   function generatePassword() {
     var password = '';
     var string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()-=' +

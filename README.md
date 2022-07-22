@@ -1,3 +1,12 @@
+### Decisions
+had trouble deciding whether to use prompt() or confirm() - prompt required more input, and more complexity than I felt I was ready for.
+Confirm() method did not allow for the user to cancel his password request (without me learning a lot more, about clicking on screen outside of popup box)
+
+Would be nice to have cancel option, but going to try confirm() method, for simplicity, hopefully.
+
+
+
+
 # Password Generator Starter Code
 AS AN employee with access to sensitive data
 I WANT to randomly generate a password that meets certain criteria

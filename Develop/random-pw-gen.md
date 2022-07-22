@@ -1,4 +1,29 @@
 ## window alert with pw options
+<script>
+
+</script>
+need characters in random assortment
+need 10 chars
+
+
+
+
+
+possibly use this from w3?:
+<script>
+function func1(event) {
+  alert("DIV 1");
+  if (document.getElementById("check").checked) {
+    event.stopPropagation();
+  }
+}
+
+function func2() {
+  alert("DIV 2");
+}
+</script>
+-----------------------------------
+
 //ended up going with prompt method instead of confirm
 <script>
  //below link referenced for creating "prompt" (confirm() method)
@@ -31,9 +56,13 @@ function myFunction() {
  // would you like to include special characters?
 
 function pwCriteria() {
-  var text = "Do you require your password to include Upper Case?\nClick OK for Yes, Cancel for No.";
-   if (confirm(text) == true) {
-
+  var userChoice1 = window.confirm("Do you require your password to include Upper Case?\nOK for Yes, Cancel for No");
+    if (confirm(userChoice1) == false) {
+    window.alert("You have canceled password generation.")
+   }
+   else (confirm(userChoice1) == true) {
+  var userChoice2 = window.confirm("Do you require your password to include lower case?\nOK for Yes, Cancel for No"); 
+    if (confirm(userChoice2) ==)
    }
 }
 </script>
