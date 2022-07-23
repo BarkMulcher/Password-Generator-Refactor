@@ -1,15 +1,41 @@
-// Assignment code here:
+// // Assignment code here:
 
-var userChoice1 = window.confirm("Do you require your password to include Upper Case?\nOK for Yes, Cancel for No");
 
-var userChoice2 = window.confirm("Do you require your password to include lower case?\nOK for Yes, Cancel for No"); 
+var generateBtn = document.querySelector("#generate");
+var generate = document.getElementById("generate");
+// eventListener for Generate Button:
+generateBtn.addEventListener("click", writePassword);
 
-var userChoice3 = window.confirm("Do you require your password to include numbers?\nOK for Yes, Cancel for No");
+// initiate password generate function:
+function generatePassword() {
 
-var userchoice4 = window.confirm("Do you require your password to include special characters?\nOK for Yes, Cancel for No")
-// ^ the above ^ variable declarations need to be added to PW gen code below
-// following is basic format from geeksforgeeks.com, which currently includes ALL optional PW criteria
-// function declaration:
+// declare
+
+  // variables for confirm pop-ups w/ text:
+var askUpperCase = window.confirm("Does your password require Upper Case?\nOK for Yes, Cancel for No");
+var askLowerCase = window.confirm("Does your password require lower case?\nOK for Yes, Cancel for No"); 
+var askSpecChar = window.confirm("Does your password require  special ch@racter$?\nOK for Yes, Cancel for No");
+var askNum = window.confirm("Does your password require numbers?\nOK for Yes, Cancel for No");
+var askLength = window.prompt("Please enter the number of characters required, between 8 & 128.")
+  // create if/else loops 
+  // later define specific PW functions
+  if (askUpperCase && askLowerCase && askSpecChar && askNum && askLength) {
+    generatePassAll(askLength);
+  } else if (askLowerCase && askSpecChar && askNum && askLength) {
+    generatePassNoUpperCase(askLength);
+  } else if (askSpecChar && askNum && askLength) {
+    generatePassNoLetter(askLength)
+  }
+  
+  // this may need to go first?
+  if (askLength < 8 || askLength > 128) {
+  window.alert("Your password must be between 8 & 128 characters in length to proceed.");
+    return generatePassword();
+}
+
+}
+
+  
 
 function generatePassword() {
 
@@ -49,7 +75,7 @@ var pwCriteria = function() {
 
     }
     // would you like to include numbers?
-  var 
+  
  // would you like to include special characters?
   }
 }
@@ -78,8 +104,12 @@ var pwrd = document.getElementById("gen");
   
 }
 
+// note: putting these items at the top of js file:
 // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+// var generateBtn = document.querySelector("#generate");
+// Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
+/* <button id=**"generate"** class="btn">Generate Password</button> */
 
 // Write password to the #password input
 function writePassword() {
@@ -90,6 +120,4 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-<button id="generate" class="btn">Generate Password</button>
+
