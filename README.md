@@ -1,8 +1,13 @@
 ### Decisions
-had trouble deciding whether to use prompt() or confirm() - prompt required more input, and more complexity than I felt I was ready for.
-Confirm() method did not allow for the user to cancel his password request (without me learning a lot more, about clicking on screen outside of popup box)
 
-Would be nice to have cancel option, but going to try confirm() method, for simplicity, hopefully.
+Our assignment was to take the current non-functional password generation page and re-factor it so that it works. The page did not originally have a function for password generation. It did include the querySelector for the #generate id, as well as the eventListener for click functionality.
+
+Learning more about prompt(), confirm(), and alert() methods was paramount. I learned the distinction in their purposes, and had to decide the best fit for the context. Prompt() required input and room for user error, so I thought it best to limit its use. I chose confirm() for the majority of criteria prompts, then ended up using all three methods in my code. I also *really* wanted the user to be able to end the process by clicking away from these pop-ups. Ultimately, I could not find a way to do this in the assignment's time frame, but I wish to incorporate this functionality in the future.
+
+Many examples of password generators utilized arrays, but I am trying to use a string for each possible set of criteria.
+
+
+
 
 
 
