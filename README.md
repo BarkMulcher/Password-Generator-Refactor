@@ -18,7 +18,7 @@
 ---------------------------------------------------------
 ## Resources
 
-### Link to deployed application:
+### Link to deployed application: https://barkmulcher.github.io/Password-Generator-Refactor/
 
 ### Inline application screenshot: ![](https://github.com/BarkMulcher/Password-Generator-Refactor/blob/main/images/application-screenshot.png)
 
