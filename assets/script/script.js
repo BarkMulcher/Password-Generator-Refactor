@@ -9,10 +9,6 @@ function generatePassword() {
   var strNum = "12345678990";
   var strTotal = "";
 
-  // need to make more strings
-  //  var upperandlower = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-
-
   
   // declare prompts w/ text: 
   // create if/else loops 
