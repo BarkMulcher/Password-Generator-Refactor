@@ -1,4 +1,4 @@
-### Decisions
+### Password Generator Refactor Project
 
 Our assignment was to take the current non-functional password generation page and re-factor it so that it works. The page did not originally have a function for password generation. It did include the querySelector for the #generate id, as well as the eventListener for click functionality.
 
