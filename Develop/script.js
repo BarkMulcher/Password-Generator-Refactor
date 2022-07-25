@@ -9,6 +9,10 @@ function generatePassword() {
   var strNum = "12345678990";
   var strTotal = "";
 
+  // need to make more strings
+  //  var upperandlower = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+
+
   
   // declare prompts w/ text: 
   // create if/else loops 
@@ -29,7 +33,7 @@ function generatePassword() {
     window.alert("Your password must have a criterion to proceed.");
     generatePassword(); 
   }
- 
+ //need to make more strings
 // create string combinations:
   if (askUpperCase) {
     strTotal = strTotal.concat(strUpperCase);
@@ -48,7 +52,7 @@ function generatePassword() {
   var password = "";       
 
   for (let i = 0; i < askLength; i++) {
-    var pw = [Math.floor(Math.random() * strTotal.length)]; 
+    var pw = Math.floor(Math.random() * strTotal.length); 
     password += strTotal.charAt(pw);
   }
   return password;
