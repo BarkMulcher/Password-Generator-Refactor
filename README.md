@@ -20,6 +20,9 @@
 
 ### Link to deployed application:
 
-### Application screenshot:
+### Inline application screenshot: ![]https://github.com/BarkMulcher/Password-Generator-Refactor/blob/main/images/application-screenshot.png
+
+
+### Application screenshot: https://github.com/BarkMulcher/Password-Generator-Refactor/blob/main/images/application-screenshot.png
 
 
